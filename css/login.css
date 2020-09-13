@@ -1,0 +1,36 @@
+.bg-cover {
+	background-image: url("../images/Mat-BG1.jpg");
+	height:  100vh;
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.center-me{
+	display: flex;
+	justify-content: center;
+	padding: 40px;
+}
+
+
+
+.form-signin{
+	text-align: center;
+	background-color: white;
+
+}
+
+.carousel-inner > .item > img{
+	margin: 0 auto;
+}
+
+
+.input{
+	margin-bottom: 20px;
+}
+
+.logo{
+	mix-blend-mode: multiply; 
+	padding: 20px; 
+	margin: 0 auto;
+}
