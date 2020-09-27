@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html class="no-js"> 
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Login</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/login.css">
-    </head>
+<?php
+require 'includes/header.php'
+?>
 
-    <body style = "overflow: hidden;">
+<main>
+<link rel="stylesheet" href="css/login.css">
         <div class = "bg-cover">
             <div class = "row">
                 <div id="slides" class="carousel slide col-md-8 offset-md-2" data-ride="carousel" style = "margin-top: 20px;">
@@ -45,26 +36,23 @@
 
               <div class = "h-40 center-me">
                 <div class = "my-auto">
-                    <form classs = "form-signin" style="background: skyblue;">
+                    <form classs = "form-signin" action="includes/login-helper.php" method = "post" style="background: skyblue;">
                          <img class = "logo" src="images/Logo-1.jpg" alt="Logo" width="100" height="100">
                             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-                                <label for="inputEmail" class="sr-only">Email address</label>
-                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                <label for="inputEmail" class="sr-only">Username or Email Address</label>
+                                <input type="text" name = "uname" id="inputEmail" class="form-control" placeholder="Username/Email" required autofocus>
                                 <label for="inputPassword" class="sr-only">Password</label>
-                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <input type="password" name = "pwd" id="inputPassword" class="form-control" placeholder="Password" required>
                             <div class="checkbox mb-3" style = "text-align: left;">
                                 <label>
                                 <input type="checkbox" value="remember-me"> Remember me
                                 </label>
                              </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    <button class="btn btn-lg btn-primary btn-block" name = "login-submit" type="submit">Sign in</button>
                     <p class="mt-5 mb-3 text-muted">&copy; 2020-2021</p>
                 </form>
 
                 </div>
             </div>
-        </div>
-        
-           
-    </body>
-</html>
+        </div>         
+</main>
