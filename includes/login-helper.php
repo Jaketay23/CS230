@@ -45,6 +45,7 @@ if(isset($_POST['login-submit'])){
                 header("Location: ../login.php?errorWrongPass");
                 exit();
             }
+            
         }
 
     }
