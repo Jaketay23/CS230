@@ -13,7 +13,7 @@ $row = mysqli_fetch_array($query);
 $query2 = mysqli_query($conn, $sqlCount);
 $row2 = mysqli_fetch_array($query2);
 
-$avg - round($row['AVGRATE'],1);
+$avg = round($row['AVGRATE'],1);
 
 echo '
 <div class="container" style= "text-align:center">
