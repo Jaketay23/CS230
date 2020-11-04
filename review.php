@@ -19,9 +19,9 @@ require 'includes/review-helper.php';
                 <div class = "form-group" style = "margin-top: 15px;">
                     <label class="title-label" for="review-title" style="font-size: 16px; font-weight: bold;">Title</label>
                     <input type = "text" name="review-title" id="review-title" style="width: 100%; margin-bottom: 10px;">
-                    <textarea class="form-control" id="review-text" name-"review" cols="10" rows="3" placeholder="Enter a comment..."></textarea>
+                    <textarea class="form-control" id="review-text" name="review" cols="10" rows="3" placeholder="Enter a comment..."></textarea>
                     <input type="hidden" name="rating" id="rating">
-                    <input type="hidden" name="item_id" value="<?php echo $_GET['id']?>">
+                    <input type="hidden" name="item_id" value="<?php echo $_GET['id'];?>">
                 </div>
                 <div class = "form-group">
                     <button class="btn btn-outline-danger" id="review-submit" name="review-submit" type="submit" style="width: 100%;">Review</button>

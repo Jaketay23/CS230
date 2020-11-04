@@ -10,9 +10,9 @@ $conn = mysqli_connect($servename, $DBuname, $DBPass, $DBname);
 if (!$conn) {
     die("Connection failed...".mysqli_connect_error());
     # code...
-
+}
     $item_id = $_GET['id'];
-    $sql = "SELECT * FROM reviews WHERE item_id='$item_id'";
+    $sql = "SELECT * FROM reviews WHERE item_id='$item_id' LIMIT 4";
     $result = mysqli_query($conn, $sql);
 
     if(mysqli_num_rows($result) > 0){
@@ -31,12 +31,13 @@ if (!$conn) {
                         <h5 class="mt-0">'.$row['title'].'</h5> 
                         <p>'.$row['rev_date'].'</p>
                         <p>'.$row['review_text'].'</p>
-                </div>    
+                    </div>    
+                </div>
             </div>
             ';
         }
     }
-}
+
 else{
     echo '<h5 style="text-align:center">No reviews, yet! Be the first! </h5>';
 }
